@@ -1,0 +1,11 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app  # 挂载当前目录到容器的 /app 目录
+    environment:
+      - FLASK_ENV=development
+      - LANG=C.UTF-8
